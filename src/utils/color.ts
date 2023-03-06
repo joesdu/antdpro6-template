@@ -1,7 +1,7 @@
 /**
  * 解析rgb格式
  * @param value 颜色十六进制RGB色值
- * @retern [R, G, B]色值数字表示数组
+ * @return [R, G, B]色值数字表示数组
  */
 const fAnalysisRGB = (value: string): number[] => {
   const temp = value.toLowerCase().substring(1, value.length);
@@ -70,7 +70,7 @@ const fColorGradualChange = (startColor: string, endColor: string, num: number):
 /**
  * 获取色值
  * @param value
- * @returns
+ * @return 获取Hex格式色值
  */
 export const getColor = (value: number): string | undefined => {
   const step = 10;
@@ -116,18 +116,18 @@ export const getColor = (value: number): string | undefined => {
 };
 /**
  * 滑块的背景样式:
-background-image: linear-gradient(
-  90deg,
-  #ff0000 0%,
-  #ff9a00 10%,
-  #ccff00 20%,
-  #33ff00 30%,
-  #00ff67 40%,
-  #00ffff 50%,
-  #0066ff 60%,
-  #3300ff 70%,
-  #cc00ff 80%,
-  #ff0099 90%,
-  #ff0000 100%
-);
+ background-image: linear-gradient(
+ 90deg,
+ #ff0000 0%,
+ #ff9a00 10%,
+ #ccff00 20%,
+ #33ff00 30%,
+ #00ff67 40%,
+ #00ffff 50%,
+ #0066ff 60%,
+ #3300ff 70%,
+ #cc00ff 80%,
+ #ff0099 90%,
+ #ff0000 100%
+ );
  */

@@ -1,10 +1,10 @@
-import defaultSettings from './defaultSettings';
-// https://umijs.org/config/
 import { defineConfig } from '@umijs/max';
+import defaultSettings from './defaultSettings';
 import routes from './routes';
 
 // const { REACT_APP_ENV = 'dev' } = process.env;
 
+// https://umijs.org/config/
 export default defineConfig({
   /**
    * @name 开启 hash 模式
