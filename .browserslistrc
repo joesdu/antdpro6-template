@@ -1,0 +1,10 @@
+[production]
+> 1%
+
+[modern]
+last 2 versions
+not ie <= 10
+not dead
+
+[ssr]
+node >= 18.6.0
