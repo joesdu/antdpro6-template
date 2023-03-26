@@ -42,6 +42,7 @@ build
 
 # yarn
 .yarn/cache
+.yarn/release
 yarn.lock
 package-lock.json
 .yarn/install-state.gz
