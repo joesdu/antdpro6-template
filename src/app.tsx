@@ -1,17 +1,13 @@
-import { AvatarDropdown, AvatarName } from '@/components/RightContent/AvatarDropdown';
-import { Question, SelectLang } from '@/components/RightContent';
+import { AvatarDropdown, AvatarName, Footer, IconFont, Question, SelectLang } from '@/components';
 import { iconfont, loginPath } from '@/configs';
-
-import Footer from '@/components/Footer';
-import IconFont from '@/components/IconFont';
+import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
+import { getColor } from '@/utils/color';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
-import type { RunTimeLayoutConfig } from '@umijs/max';
 import { SettingDrawer } from '@ant-design/pro-components';
+import type { RunTimeLayoutConfig } from '@umijs/max';
+import { history } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
-import { getColor } from '@/utils/color';
-import { history } from '@umijs/max';
-import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 
 console.log(getColor(44));
 
