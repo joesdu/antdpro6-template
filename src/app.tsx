@@ -1,9 +1,9 @@
 import { AvatarDropdown, AvatarName, Footer, IconFont, Question, SelectLang } from '@/components';
 import { iconfont, loginPath } from '@/configs';
+
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 import { getColor } from '@/utils/color';
-import type { Settings as LayoutSettings } from '@ant-design/pro-components';
-import { SettingDrawer } from '@ant-design/pro-components';
+import { SettingDrawer, type Settings as LayoutSettings } from '@ant-design/pro-components';
 import type { RunTimeLayoutConfig } from '@umijs/max';
 import { history } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
