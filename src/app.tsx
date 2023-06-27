@@ -1,5 +1,6 @@
 import { AvatarDropdown, AvatarName, Footer, IconFont, Question, SelectLang } from '@/components';
 import { iconfont, loginPath } from '@/configs';
+import '@/extensions';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 import { getColor } from '@/utils/color';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
@@ -9,7 +10,14 @@ import { history } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
 
+// 测试色值取的是否正常
 console.log(getColor(44));
+// 测试空对象判断是否OK
+console.log(
+  Object.isNullOrEmpty({
+    name: 'VV'
+  })
+);
 
 /**
  * @see  https://umijs.org/zh-CN/plugins/plugin-initial-state
