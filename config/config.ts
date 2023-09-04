@@ -1,5 +1,5 @@
-import { defineConfig } from '@umijs/max';
 import defaultSettings from './defaultSettings';
+import { defineConfig } from '@umijs/max';
 import routes from './routes';
 
 // const { REACT_APP_ENV = 'dev' } = process.env;
