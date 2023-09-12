@@ -9,7 +9,7 @@ import Settings from '../../../config/defaultSettings';
 import { flushSync } from 'react-dom';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
 import { login } from '@/services/ant-design-pro/api';
-import loginbg from '@/assets/login/loginbg.png';
+import { loginbg } from '@/assets/login';
 import { useEmotionCss } from '@ant-design/use-emotion-css';
 
 const ActionIcons = () => {

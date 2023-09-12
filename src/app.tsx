@@ -4,14 +4,12 @@ import { AvatarDropdown, AvatarName, Footer, IconFont, Question, SelectLang } fr
 import { ReactElement, ReactNode } from 'react';
 import { RunTimeLayoutConfig, history } from '@umijs/max';
 import { iconfont, loginPath } from '@/configs';
+import { layout01, layout02, layout03 } from '@/assets/app';
 
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { SettingDrawer } from '@ant-design/pro-components';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
-import layout01 from '@/assets/layout01.webp';
-import layout02 from '@/assets/layout02.webp';
-import layout03 from '@/assets/layout03.webp';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 
 /**

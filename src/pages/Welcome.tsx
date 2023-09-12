@@ -1,10 +1,9 @@
 import { Card, theme } from 'antd';
+import { rectangle, welcomebg } from '@/assets/welcome';
 
 import { PageContainer } from '@ant-design/pro-components';
 import React from 'react';
-import rectangle from '@/assets/welcome/rectangle.svg';
 import { useModel } from '@umijs/max';
-import welcomebg from '@/assets/welcome/welcomebg.png';
 
 /**
  * 每个单独的卡片，为了复用样式抽成了组件
