@@ -2,7 +2,9 @@ import { Card, theme } from 'antd';
 
 import { PageContainer } from '@ant-design/pro-components';
 import React from 'react';
+import rectangle from '@/assets/welcome/rectangle.svg';
 import { useModel } from '@umijs/max';
+import welcomebg from '@/assets/welcome/welcomebg.png';
 
 /**
  * 每个单独的卡片，为了复用样式抽成了组件
@@ -50,7 +52,7 @@ const InfoCard: React.FC<{
             padding: '8px 16px 16px 12px',
             color: '#FFF',
             fontWeight: 'bold',
-            backgroundImage: "url('https://gw.alipayobjects.com/zos/bmw-prod/daaf8d50-8e6d-4251-905d-676a24ddfa12.svg')"
+            backgroundImage: `url('${rectangle}')`
           }}
         >
           {index}
@@ -104,7 +106,7 @@ const Welcome: React.FC = () => {
             backgroundPosition: '100% -30%',
             backgroundRepeat: 'no-repeat',
             backgroundSize: '274px auto',
-            backgroundImage: "url('https://gw.alipayobjects.com/mdn/rms_a9745b/afts/img/A*BuFmQqsB2iAAAAAAAAAAAAAAARQnAQ')"
+            backgroundImage: `url('${welcomebg}')`
           }}
         >
           <div

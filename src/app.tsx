@@ -1,22 +1,18 @@
-import { AvatarDropdown, AvatarName, Footer, IconFont, Question, SelectLang } from '@/components';
-import { iconfont, loginPath } from '@/configs';
 import '@/extensions';
-import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
-import { getColor } from '@/utils/color';
-import { SettingDrawer, type Settings as LayoutSettings } from '@ant-design/pro-components';
-import type { RunTimeLayoutConfig } from '@umijs/max';
-import { history } from '@umijs/max';
+
+import { AvatarDropdown, AvatarName, Footer, IconFont, Question, SelectLang } from '@/components';
+import { ReactElement, ReactNode } from 'react';
+import { RunTimeLayoutConfig, history } from '@umijs/max';
+import { iconfont, loginPath } from '@/configs';
+
+import type { Settings as LayoutSettings } from '@ant-design/pro-components';
+import { SettingDrawer } from '@ant-design/pro-components';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
-
-// 测试色值取的是否正常
-console.log(getColor(44));
-// 测试空对象判断是否OK
-console.log(
-  Object.isNullOrEmpty({
-    name: 'VV'
-  })
-);
+import layout01 from '@/assets/layout01.webp';
+import layout02 from '@/assets/layout02.webp';
+import layout03 from '@/assets/layout03.webp';
+import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 
 /**
  * @see  https://umijs.org/zh-CN/plugins/plugin-initial-state
@@ -55,13 +51,13 @@ export async function getInitialState(): Promise<{
 }
 
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
-export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
+export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }: any) => {
   return {
     actionsRender: () => [<Question key="doc" />, <SelectLang key="SelectLang" />],
     avatarProps: {
       src: initialState?.currentUser?.avatar,
       title: <AvatarName />,
-      render: (_, avatarChildren) => {
+      render: (_: any, avatarChildren: ReactNode) => {
         return <AvatarDropdown>{avatarChildren}</AvatarDropdown>;
       }
     },
@@ -77,21 +73,21 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       }
     },
     iconfontUrl: iconfont,
-    layoutBgImgList: [
+    bgLayoutImgList: [
       {
-        src: 'https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/D2LWSqNny4sAAAAAAAAAAAAAFl94AQBr',
+        src: layout01,
         left: 85,
         bottom: 100,
         height: '303px'
       },
       {
-        src: 'https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/C2TWRpJpiC0AAAAAAAAAAAAAFl94AQBr',
+        src: layout02,
         bottom: -68,
         right: -45,
         height: '303px'
       },
       {
-        src: 'https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/F6vSTbj8KpYAAAAAAAAAAAAAFl94AQBr',
+        src: layout03,
         bottom: 0,
         left: 0,
         width: '331px'
@@ -107,10 +103,10 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     // 自定义 403 页面
     // unAccessible: <div>unAccessible</div>,
     // 增加一个 loading 的状态
-    childrenRender: children => {
+    childrenRender: (children: ReactElement) => {
       // if (initialState?.loading) return <PageLoading />;
       return (
-        <>
+        <div>
           {children}
           <SettingDrawer
             disableUrlParams
@@ -119,13 +115,13 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
             hideCopyButton
             settings={initialState?.settings}
             onSettingChange={settings => {
-              setInitialState(preInitialState => ({
+              setInitialState((preInitialState: any) => ({
                 ...preInitialState,
                 settings
               }));
             }}
           />
-        </>
+        </div>
       );
     },
     ...initialState?.settings

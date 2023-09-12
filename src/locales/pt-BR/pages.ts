@@ -1,6 +1,5 @@
 export default {
-  'pages.layouts.userLayout.title':
-    'Ant Design é a especificação de web design mais influente no distrito de Xihu',
+  'pages.layouts.userLayout.title': 'Ant Design é a especificação de web design mais influente no distrito de Xihu',
   'pages.login.accountLogin.tab': 'Login da conta',
   'pages.login.accountLogin.errorMessage': 'usuário/senha incorreto(admin/ant.design)',
   'pages.login.failure': 'Login falhou, por favor tente novamente!',
@@ -26,26 +25,22 @@ export default {
   'pages.welcome.link': 'Bem-vindo',
   'pages.welcome.alertMessage': 'Componentes pesados mais rápidos e mais fortes foram lançados.',
   'pages.admin.subPage.title': 'Esta página só pode ser vista pelo Admin',
-  'pages.admin.subPage.alertMessage':
-    'O Umi ui foi lançado, bem-vindo ao usar o npm run ui para iniciar a experiência.',
+  'pages.admin.subPage.alertMessage': 'O Umi ui foi lançado, bem-vindo ao usar o npm run ui para iniciar a experiência.',
   'pages.searchTable.createForm.newRule': 'Neva Regra',
   'pages.searchTable.updateForm.ruleConfig': 'Configuração de Regra',
   'pages.searchTable.updateForm.basicConfig': 'Informação básica',
   'pages.searchTable.updateForm.ruleName.nameLabel': 'Nome da Regra',
   'pages.searchTable.updateForm.ruleName.nameRules': 'Por favor entre com o nome da regra!',
   'pages.searchTable.updateForm.ruleDesc.descLabel': 'Descrição da Regra',
-  'pages.searchTable.updateForm.ruleDesc.descPlaceholder':
-    'Por favor insira ao menos cinco caracteres',
-  'pages.searchTable.updateForm.ruleDesc.descRules':
-    'Insira uma descrição de regra de pelo menos cinco caracteres!',
+  'pages.searchTable.updateForm.ruleDesc.descPlaceholder': 'Por favor insira ao menos cinco caracteres',
+  'pages.searchTable.updateForm.ruleDesc.descRules': 'Insira uma descrição de regra de pelo menos cinco caracteres!',
   'pages.searchTable.updateForm.ruleProps.title': 'Configurar Propriedades',
   'pages.searchTable.updateForm.object': 'Objeto de Monitoramento',
   'pages.searchTable.updateForm.ruleProps.templateLabel': 'Modelo de Regra',
   'pages.searchTable.updateForm.ruleProps.typeLabel': 'Tipo de Regra',
   'pages.searchTable.updateForm.schedulingPeriod.title': 'Definir Período de Agendamento',
   'pages.searchTable.updateForm.schedulingPeriod.timeLabel': 'Hora de Início',
-  'pages.searchTable.updateForm.schedulingPeriod.timeRules':
-    'Por favor selecione um horáriod e início!',
+  'pages.searchTable.updateForm.schedulingPeriod.timeRules': 'Por favor selecione um horáriod e início!',
   'pages.searchTable.titleDesc': 'Descrição',
   'pages.searchTable.ruleName': 'O nome da regra é obrigatório',
   'pages.searchTable.titleCallNo': 'Número de chamadas de serviço',
@@ -66,5 +61,5 @@ export default {
   'pages.searchTable.totalServiceCalls': 'Número total de chamadas de serviço',
   'pages.searchTable.tenThousand': '0000',
   'pages.searchTable.batchDeletion': 'deleção em lote',
-  'pages.searchTable.batchApproval': 'aprovação em lote',
+  'pages.searchTable.batchApproval': 'aprovação em lote'
 };

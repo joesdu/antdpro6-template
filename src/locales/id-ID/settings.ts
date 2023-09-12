@@ -29,13 +29,11 @@ export default {
   'app.settings.security.phone': 'Keamanan Ponsel',
   'app.settings.security.phone-description': 'Mengikat Ponsel',
   'app.settings.security.question': 'Pertanyaan Keamanan',
-  'app.settings.security.question-description':
-    'Pertanyaan Keamanan belum diatur, dan kebijakan keamanan dapat melindungi akun secara efektif',
+  'app.settings.security.question-description': 'Pertanyaan Keamanan belum diatur, dan kebijakan keamanan dapat melindungi akun secara efektif',
   'app.settings.security.email': 'Email Cadangan',
   'app.settings.security.email-description': 'Mengikat Email',
   'app.settings.security.mfa': 'Perangka MFA',
-  'app.settings.security.mfa-description':
-    'Tidak mengikat Perangkat MFA, setelah diikat, dapat dikonfirmasi dua kali',
+  'app.settings.security.mfa-description': 'Tidak mengikat Perangkat MFA, setelah diikat, dapat dikonfirmasi dua kali',
   'app.settings.security.modify': 'Modifikasi',
   'app.settings.security.set': 'Setel',
   'app.settings.security.bind': 'Ikat',
@@ -47,14 +45,11 @@ export default {
   'app.settings.binding.dingding-description': 'Tidak mengikat akun DingTalk',
   'app.settings.binding.bind': 'Ikat',
   'app.settings.notification.password': 'Kata Sandi Akun',
-  'app.settings.notification.password-description':
-    'Pesan dari pengguna lain akan diberitahu dalam bentuk surat',
+  'app.settings.notification.password-description': 'Pesan dari pengguna lain akan diberitahu dalam bentuk surat',
   'app.settings.notification.messages': 'Pesan Sistem',
-  'app.settings.notification.messages-description':
-    'Pesan sistem akan diberitahu dalam bentuk surat',
+  'app.settings.notification.messages-description': 'Pesan sistem akan diberitahu dalam bentuk surat',
   'app.settings.notification.todo': 'Notifikasi daftar To-do',
-  'app.settings.notification.todo-description':
-    'Daftar to-do akan diberitahukan dalam bentuk surat dari stasiun',
+  'app.settings.notification.todo-description': 'Daftar to-do akan diberitahukan dalam bentuk surat dari stasiun',
   'app.settings.open': 'Buka',
-  'app.settings.close': 'Tutup',
+  'app.settings.close': 'Tutup'
 };

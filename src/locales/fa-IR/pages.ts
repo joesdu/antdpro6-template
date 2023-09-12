@@ -25,8 +25,7 @@ export default {
   'pages.welcome.link': 'خوش آمدید',
   'pages.welcome.alertMessage': 'اجزای سنگین تر سریعتر و قوی تر آزاد شده اند.',
   'pages.admin.subPage.title': 'این صفحه فقط توسط مدیر قابل مشاهده است',
-  'pages.admin.subPage.alertMessage':
-    'رابط کاربری Umi اکنون منتشر شده است ، برای شروع تجربه استفاده از npm run ui خوش آمدید.',
+  'pages.admin.subPage.alertMessage': 'رابط کاربری Umi اکنون منتشر شده است ، برای شروع تجربه استفاده از npm run ui خوش آمدید.',
   'pages.searchTable.createForm.newRule': 'قانون جدید',
   'pages.searchTable.updateForm.ruleConfig': 'پیکربندی قانون',
   'pages.searchTable.updateForm.basicConfig': 'اطلاعات اولیه',
@@ -34,8 +33,7 @@ export default {
   'pages.searchTable.updateForm.ruleName.nameRules': 'لطفاً نام قانون را وارد کنید!',
   'pages.searchTable.updateForm.ruleDesc.descLabel': 'شرح قانون',
   'pages.searchTable.updateForm.ruleDesc.descPlaceholder': 'لطفاً حداقل پنج حرف وارد کنید',
-  'pages.searchTable.updateForm.ruleDesc.descRules':
-    'لطفاً حداقل یک قانون حاوی پنج کاراکتر شرح دهید!',
+  'pages.searchTable.updateForm.ruleDesc.descRules': 'لطفاً حداقل یک قانون حاوی پنج کاراکتر شرح دهید!',
   'pages.searchTable.updateForm.ruleProps.title': 'پیکربندی خصوصیات',
   'pages.searchTable.updateForm.object': 'نظارت بر شی',
   'pages.searchTable.updateForm.ruleProps.templateLabel': 'الگوی قانون',
@@ -63,5 +61,5 @@ export default {
   'pages.searchTable.totalServiceCalls': 'تعداد کل تماس های خدماتی',
   'pages.searchTable.tenThousand': '0000',
   'pages.searchTable.batchDeletion': 'حذف دسته ای',
-  'pages.searchTable.batchApproval': 'تصویب دسته ای',
+  'pages.searchTable.batchApproval': 'تصویب دسته ای'
 };

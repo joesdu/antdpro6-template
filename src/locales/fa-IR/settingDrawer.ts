@@ -25,8 +25,6 @@ export default {
   'app.setting.othersettings': 'تنظیمات دیگر',
   'app.setting.weakmode': 'حالت ضعیف',
   'app.setting.copy': 'تنظیمات کپی',
-  'app.setting.copyinfo':
-    'موفقیت در کپی کردن ， لطفا defaultSettings را در src / models / setting.js جایگزین کنید',
-  'app.setting.production.hint':
-    'صفحه تنظیم فقط در محیط توسعه نمایش داده می شود ، لطفاً دستی تغییر دهید',
+  'app.setting.copyinfo': 'موفقیت در کپی کردن ， لطفا defaultSettings را در src / models / setting.js جایگزین کنید',
+  'app.setting.production.hint': 'صفحه تنظیم فقط در محیط توسعه نمایش داده می شود ، لطفاً دستی تغییر دهید'
 };

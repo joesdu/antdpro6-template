@@ -48,5 +48,5 @@ export default {
   'menu.editor': 'Penyusun Grafis',
   'menu.editor.flow': 'Penyusun Alur',
   'menu.editor.mind': 'Penyusun Mind',
-  'menu.editor.koni': 'Penyusun Koni',
+  'menu.editor.koni': 'Penyusun Koni'
 };

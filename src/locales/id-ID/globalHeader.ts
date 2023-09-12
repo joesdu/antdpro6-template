@@ -13,5 +13,5 @@ export default {
   'component.noticeIcon.clear': 'Kosongkan',
   'component.noticeIcon.cleared': 'Berhasil dikosongkan',
   'component.noticeIcon.empty': 'Tidak ada pemberitahuan',
-  'component.noticeIcon.view-more': 'Melihat lebih',
+  'component.noticeIcon.view-more': 'Melihat lebih'
 };

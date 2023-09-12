@@ -13,5 +13,5 @@ export default {
   'component.noticeIcon.clear': 'پاک کردن',
   'component.noticeIcon.cleared': 'پاک شد',
   'component.noticeIcon.empty': 'بدون اعلان',
-  'component.noticeIcon.view-more': 'نمایش بیشتر',
+  'component.noticeIcon.view-more': 'نمایش بیشتر'
 };

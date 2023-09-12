@@ -48,5 +48,5 @@ export default {
   'menu.editor': 'グラフィックエディタ',
   'menu.editor.flow': 'フローエディタ',
   'menu.editor.mind': 'マインドエディター',
-  'menu.editor.koni': 'コニエディター',
+  'menu.editor.koni': 'コニエディター'
 };

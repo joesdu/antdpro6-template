@@ -1,6 +1,5 @@
 export default {
-  'pages.layouts.userLayout.title':
-    'Ant Design adalah spesifikasi desain Web yang paling berpengaruh di Kabupaten Xihu',
+  'pages.layouts.userLayout.title': 'Ant Design adalah spesifikasi desain Web yang paling berpengaruh di Kabupaten Xihu',
   'pages.login.accountLogin.tab': 'Login dengan akun',
   'pages.login.accountLogin.errorMessage': 'Nama pengguna dan kata sandi salah(admin/ant.design)',
   'pages.login.failure': 'Log masuk gagal, silakan coba lagi!',
@@ -24,21 +23,17 @@ export default {
   'pages.login.loginWith': 'Masuk dengan :',
   'pages.login.registerAccount': 'Daftar Akun',
   'pages.welcome.link': 'Selamat datang',
-  'pages.welcome.alertMessage':
-    'Komponen heavy-duty yang lebih cepat dan lebih kuat telah dirilis.',
+  'pages.welcome.alertMessage': 'Komponen heavy-duty yang lebih cepat dan lebih kuat telah dirilis.',
   'pages.admin.subPage.title': 'Halaman ini hanya dapat dilihat oleh admin',
-  'pages.admin.subPage.alertMessage':
-    'umi ui telah dirilis, silahkan gunakan npm run ui untuk memulai pengalaman.',
+  'pages.admin.subPage.alertMessage': 'umi ui telah dirilis, silahkan gunakan npm run ui untuk memulai pengalaman.',
   'pages.searchTable.createForm.newRule': 'Aturan baru',
   'pages.searchTable.updateForm.ruleConfig': 'Konfigurasi aturan',
   'pages.searchTable.updateForm.basicConfig': 'Informasi dasar',
   'pages.searchTable.updateForm.ruleName.nameLabel': 'Nama aturan',
   'pages.searchTable.updateForm.ruleName.nameRules': 'Harap masukkan nama aturan!',
   'pages.searchTable.updateForm.ruleDesc.descLabel': 'Deskripsi aturan',
-  'pages.searchTable.updateForm.ruleDesc.descPlaceholder':
-    'Harap masukkan setidaknya lima karakter',
-  'pages.searchTable.updateForm.ruleDesc.descRules':
-    'Harap masukkan deskripsi aturan setidaknya lima karakter!',
+  'pages.searchTable.updateForm.ruleDesc.descPlaceholder': 'Harap masukkan setidaknya lima karakter',
+  'pages.searchTable.updateForm.ruleDesc.descRules': 'Harap masukkan deskripsi aturan setidaknya lima karakter!',
   'pages.searchTable.updateForm.ruleProps.title': 'Properti aturan',
   'pages.searchTable.updateForm.object': 'Objek pemantauan',
   'pages.searchTable.updateForm.ruleProps.templateLabel': 'Template aturan',
@@ -66,5 +61,5 @@ export default {
   'pages.searchTable.totalServiceCalls': 'Jumlah total panggilan layanan',
   'pages.searchTable.tenThousand': '0000',
   'pages.searchTable.batchDeletion': 'Penghapusan batch',
-  'pages.searchTable.batchApproval': 'Persetujuan batch',
+  'pages.searchTable.batchApproval': 'Persetujuan batch'
 };

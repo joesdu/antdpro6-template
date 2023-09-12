@@ -21,5 +21,5 @@ export default {
   ...settings,
   ...pwa,
   ...component,
-  ...pages,
+  ...pages
 };

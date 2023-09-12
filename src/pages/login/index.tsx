@@ -1,15 +1,16 @@
-import { AlipayCircleOutlined, LockOutlined, MobileOutlined, TaobaoCircleOutlined, UserOutlined, WeiboCircleOutlined } from '@ant-design/icons';
-import { LoginForm, ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';
-import { FormattedMessage, Helmet, SelectLang, history, useIntl, useModel } from '@umijs/max';
 import { Alert, Tabs, message } from 'antd';
+import { AlipayCircleOutlined, LockOutlined, MobileOutlined, TaobaoCircleOutlined, UserOutlined, WeiboCircleOutlined } from '@ant-design/icons';
+import { FormattedMessage, Helmet, SelectLang, history, useIntl, useModel } from '@umijs/max';
+import { LoginForm, ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';
 import React, { useState } from 'react';
 
 import { Footer } from '@/components';
-import { login } from '@/services/ant-design-pro/api';
-import { getFakeCaptcha } from '@/services/ant-design-pro/login';
-import { useEmotionCss } from '@ant-design/use-emotion-css';
+import Settings from '../../../config/defaultSettings';
 import { flushSync } from 'react-dom';
-import Settings from '../../../../config/defaultSettings';
+import { getFakeCaptcha } from '@/services/ant-design-pro/login';
+import { login } from '@/services/ant-design-pro/api';
+import loginbg from '@/assets/login/loginbg.png';
+import { useEmotionCss } from '@ant-design/use-emotion-css';
 
 const ActionIcons = () => {
   const langClassName = useEmotionCss(({ token }) => {
@@ -83,7 +84,7 @@ const Login: React.FC = () => {
       flexDirection: 'column',
       height: '100vh',
       overflow: 'auto',
-      backgroundImage: "url('https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/V-_oS6r-i7wAAAAAAAAAAAAAFl94AQBr')",
+      backgroundImage: `url("${loginbg}")`,
       backgroundSize: '100% 100%'
     };
   });
@@ -94,7 +95,7 @@ const Login: React.FC = () => {
     const userInfo = await initialState?.fetchUserInfo?.();
     if (userInfo) {
       flushSync(() => {
-        setInitialState(s => ({
+        setInitialState((s: any) => ({
           ...s,
           currentUser: userInfo
         }));

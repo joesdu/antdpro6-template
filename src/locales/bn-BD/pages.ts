@@ -1,6 +1,5 @@
 export default {
-  'pages.layouts.userLayout.title':
-    'পিঁপড়া ডিজাইন হচ্ছে সিহু জেলার সবচেয়ে প্রভাবশালী ওয়েব ডিজাইনের স্পেসিফিকেশন',
+  'pages.layouts.userLayout.title': 'পিঁপড়া ডিজাইন হচ্ছে সিহু জেলার সবচেয়ে প্রভাবশালী ওয়েব ডিজাইনের স্পেসিফিকেশন',
   'pages.login.accountLogin.tab': 'অ্যাকাউন্টে লগইন',
   'pages.login.accountLogin.errorMessage': 'ভুল ব্যবহারকারীর নাম/পাসওয়ার্ড(admin/ant.design)',
   'pages.login.failure': 'লগইন ব্যর্থ হয়েছে। আবার চেষ্টা করুন!',
@@ -26,8 +25,7 @@ export default {
   'pages.welcome.link': 'স্বাগতম',
   'pages.welcome.alertMessage': 'দ্রুত এবং শক্তিশালী ভারী শুল্ক উপাদান প্রকাশ করা হয়েছে।',
   'pages.admin.subPage.title': 'এই পৃষ্ঠাটি কেবল অ্যাডমিন দ্বারা দেখা যাবে',
-  'pages.admin.subPage.alertMessage':
-    'UMI UI এখন প্রকাশিত হয়েছে, অভিজ্ঞতা শুরু করতে npm run ui ব্যবহার করতে স্বাগতম।',
+  'pages.admin.subPage.alertMessage': 'UMI UI এখন প্রকাশিত হয়েছে, অভিজ্ঞতা শুরু করতে npm run ui ব্যবহার করতে স্বাগতম।',
   'pages.searchTable.createForm.newRule': 'নতুন বিধি',
   'pages.searchTable.updateForm.ruleConfig': 'বিধি কনফিগারেশন',
   'pages.searchTable.updateForm.basicConfig': 'মৌলিক তথ্য',
@@ -35,8 +33,7 @@ export default {
   'pages.searchTable.updateForm.ruleName.nameRules': 'বিধির নাম লিখুন!',
   'pages.searchTable.updateForm.ruleDesc.descLabel': 'বিধির বিবরণ',
   'pages.searchTable.updateForm.ruleDesc.descPlaceholder': 'কমপক্ষে পাঁচটি অক্ষর লিখুন',
-  'pages.searchTable.updateForm.ruleDesc.descRules':
-    'কমপক্ষে পাঁচটি অক্ষরের একটি বিধান বিবরণ লিখুন!',
+  'pages.searchTable.updateForm.ruleDesc.descRules': 'কমপক্ষে পাঁচটি অক্ষরের একটি বিধান বিবরণ লিখুন!',
   'pages.searchTable.updateForm.ruleProps.title': 'বৈশিষ্ট্য কনফিগার করুন',
   'pages.searchTable.updateForm.object': 'নিরীক্ষণ অবজেক্ট',
   'pages.searchTable.updateForm.ruleProps.templateLabel': 'বিধি টেম্পলেট',
@@ -64,5 +61,5 @@ export default {
   'pages.searchTable.totalServiceCalls': 'পরিষেবা কলগুলির মোট সংখ্যা',
   'pages.searchTable.tenThousand': '000',
   'pages.searchTable.batchDeletion': 'একসাখে ডিলিট',
-  'pages.searchTable.batchApproval': 'একসাখে অনুমোদন',
+  'pages.searchTable.batchApproval': 'একসাখে অনুমোদন'
 };
