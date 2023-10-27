@@ -6,31 +6,25 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=1 max build",
     "build": "max build",
-    "deploy": "npm run build && npm run gh-pages",
-    "gh-pages": "gh-pages -d dist",
     "i18n-remove": "pro i18n-remove --locale=zh-CN --write",
     "postinstall": "max setup",
-    "lint": "npm run lint:js && npm run lint:prettier && npm run tsc",
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
-    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src ",
-    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
-    "lint:prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\" --end-of-line auto",
     "prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\"",
     "start": "cross-env PORT=8848 max dev"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+    "**/*.{js,jsx,ts,tsx}": "yarn lint-staged:js",
     "**/*.{js,jsx,tsx,ts,less,md,json}": [
       "prettier --write"
     ]
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
-    "@ant-design/pro-components": "^2.6.29",
+    "@ant-design/pro-components": "^2.6.34",
     "@ant-design/use-emotion-css": "1.0.4",
     "@umijs/route-utils": "^4.0.1",
-    "antd": "^5.10.0",
+    "antd": "^5.10.2",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",
     "omit.js": "^2.0.2",
@@ -45,16 +39,15 @@
     "@ant-design/pro-cli": "^3.1.0",
     "@types/classnames": "^2.3.1",
     "@types/history": "^5.0.0",
-    "@types/react": "^18.2.28",
-    "@types/react-dom": "^18.2.13",
-    "@types/react-helmet": "^6.1.7",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@types/react-helmet": "^6.1.8",
     "@umijs/fabric": "^4.0.1",
-    "@umijs/lint": "^4.0.85",
-    "@umijs/max": "^4.0.85",
+    "@umijs/lint": "^4.0.87",
+    "@umijs/max": "^4.0.87",
     "cross-env": "^7.0.3",
-    "gh-pages": "^6.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^15.0.2",
     "mockjs": "^1.1.0",
     "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
@@ -64,5 +57,5 @@
   "engines": {
     "node": ">=18.6.0"
   },
-  "packageManager": "yarn@3.6.4"
+  "packageManager": "yarn@4.0.0"
 }

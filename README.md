@@ -14,10 +14,6 @@ corepack enable
 corepack prepare yarn@stable --activate
 # 将yarn包管理工具安装到项目
 yarn set version stable
-# 导入 yarn 更新依赖包插件
-yarn plugin import interactive-tools
-# 导入 yarn TypeScript 库自动加入插件
-yarn plugin import typescript
 
 # 安装项目依赖
 yarn install
