@@ -5,13 +5,12 @@
   "description": "An out-of-box UI solution for enterprise applications",
   "scripts": {
     "analyze": "cross-env ANALYZE=1 max build",
+    "start": "cross-env PORT=8848 max dev",
     "build": "max build",
     "i18n-remove": "pro i18n-remove --locale=zh-CN --write",
     "postinstall": "max setup",
     "lint-staged": "lint-staged",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
-    "prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\"",
-    "start": "cross-env PORT=8848 max dev"
+    "prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\""
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "yarn lint-staged:js",
