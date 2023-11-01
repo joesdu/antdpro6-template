@@ -4,7 +4,7 @@ This project is initialized with [Ant Design Pro](https://pro.ant.design). Follo
 
 ## Environment Prepare
 
-- 安装[yarn 2.x](https://yarnpkg.com/getting-started/install)包管理工具
+- 安装[yarn 4.x](https://yarnpkg.com/getting-started/install)包管理工具
 - 要求 [Node.js](https://nodejs.org/en/download/) 的版本 >=18.6
 - 以管理员身份打开命令提示符
 
