@@ -112,7 +112,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }: a
             hideHintAlert
             hideCopyButton
             settings={initialState?.settings}
-            onSettingChange={settings => {
+            onSettingChange={(settings: any) => {
               setInitialState((preInitialState: any) => ({
                 ...preInitialState,
                 settings
