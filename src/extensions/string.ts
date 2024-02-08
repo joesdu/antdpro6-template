@@ -35,12 +35,12 @@ String.prototype.isUrl = function (): boolean {
 /**
  * 按指定长度分段字符串
  * @param len:number 指定长度(正整数)
- * @returns Array<string> (字符串数组)
+ * @returns string[] (字符串数组)
  */
-String.prototype.segment = function (len: number): Array<string> {
+String.prototype.segment = function (len: number): string[] {
   if (this.isNullOrEmpty() || len <= 0) return [];
-  let array: Array<string> = [];
-  let length: number = this.length;
+  const array: string[] = [];
+  const length: number = this.length;
   for (let i: number = 0; i < length / len; i++) {
     if ((i + 1) * len > length) array.push(this.substring(i * len, length));
     else array.push(this.substring(i * len, (i + 1) * len));

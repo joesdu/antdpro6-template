@@ -20,7 +20,7 @@ export default {
   'pages.login.rememberMe': '自动登录',
   'pages.login.forgotPassword': '忘记密码 ?',
   'pages.login.submit': '登录',
-  'pages.login.loginWith': '其他登录方式 :',
+  'pages.login.loginWith': '其他登录方式',
   'pages.login.registerAccount': '注册账户',
   'pages.welcome.link': '欢迎使用',
   'pages.welcome.alertMessage': '更快更强的重型组件，已经发布。',

@@ -20,7 +20,7 @@ export default {
   'pages.login.rememberMe': 'Ingat saya',
   'pages.login.forgotPassword': 'Lupa Kata Sandi?',
   'pages.login.submit': 'Masuk',
-  'pages.login.loginWith': 'Masuk dengan :',
+  'pages.login.loginWith': 'Masuk dengan',
   'pages.login.registerAccount': 'Daftar Akun',
   'pages.welcome.link': 'Selamat datang',
   'pages.welcome.alertMessage': 'Komponen heavy-duty yang lebih cepat dan lebih kuat telah dirilis.',

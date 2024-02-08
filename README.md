@@ -33,4 +33,4 @@ You can view full document on our [official website](https://pro.ant.design). An
 
 ## 目前版本(官方代码版本)
 
-- 2023-12-07 [a8f3cff70681940c3d2c95be87d24cb7def7b10f](https://github.com/ant-design/ant-design-pro/tree/a8f3cff70681940c3d2c95be87d24cb7def7b10f)
+- 2024-01-23 [8ff545e8f4008be3c2fa4b34d2c470ad978e5f2b](https://github.com/ant-design/ant-design-pro/tree/8ff545e8f4008be3c2fa4b34d2c470ad978e5f2b)

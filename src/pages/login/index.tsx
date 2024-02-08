@@ -1,10 +1,9 @@
-import { Alert, Tabs, message } from 'antd';
+import { Alert, Divider, Space, Tabs, message, theme } from 'antd';
 import { AlipayCircleOutlined, LockOutlined, MobileOutlined, TaobaoCircleOutlined, UserOutlined, WeiboCircleOutlined } from '@ant-design/icons';
 import { FormattedMessage, Helmet, SelectLang, history, useIntl, useModel } from '@umijs/max';
 import { LoginForm, ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';
 import React, { useState } from 'react';
 
-import { Footer } from '@/components';
 import Settings from '../../../config/defaultSettings';
 import { createStyles } from 'antd-style';
 import { flushSync } from 'react-dom';
@@ -14,9 +13,9 @@ import { login } from '@/services/ant-design-pro/api';
 const useStyles = createStyles(({ token }) => {
   return {
     action: {
-      marginLeft: '8px',
+      padding: '0 12px',
       color: 'rgba(0, 0, 0, 0.2)',
-      fontSize: '24px',
+      fontSize: 36,
       verticalAlign: 'middle',
       cursor: 'pointer',
       transition: 'color 0.3s',
@@ -89,6 +88,7 @@ const Login: React.FC = () => {
   const { initialState, setInitialState } = useModel('@@initialState');
   const { styles } = useStyles();
   const intl = useIntl();
+  const { token } = theme.useToken();
 
   const fetchUserInfo = async () => {
     const userInfo = await initialState?.fetchUserInfo?.();
@@ -146,7 +146,8 @@ const Login: React.FC = () => {
       <div
         style={{
           flex: '1',
-          padding: '32px 0'
+          padding: '32px 0',
+          marginTop: '20vh'
         }}
       >
         <LoginForm
@@ -160,7 +161,31 @@ const Login: React.FC = () => {
           initialValues={{
             autoLogin: true
           }}
-          actions={[<FormattedMessage key="loginWith" id="pages.login.loginWith" defaultMessage="其他登录方式" />, <ActionIcons key="icons" />]}
+          actions={
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column'
+              }}
+            >
+              <Divider plain>
+                <span
+                  style={{
+                    color: token.colorTextPlaceholder,
+                    fontWeight: 'normal',
+                    fontSize: 14
+                  }}
+                >
+                  <FormattedMessage key="loginWith" id="pages.login.loginWith" defaultMessage="其他登录方式" />
+                </span>
+              </Divider>
+              <Space align="center" size={24}>
+                <ActionIcons />
+              </Space>
+            </div>
+          }
           onFinish={async values => {
             await handleSubmit(values as API.LoginParams);
           }}
@@ -319,7 +344,6 @@ const Login: React.FC = () => {
           </div>
         </LoginForm>
       </div>
-      <Footer />
     </div>
   );
 };

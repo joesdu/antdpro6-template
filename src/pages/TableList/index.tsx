@@ -1,12 +1,12 @@
-import { addRule, removeRule, rule, updateRule } from '@/services/ant-design-pro/api';
 import type { ActionType, ProColumns, ProDescriptionsItemProps } from '@ant-design/pro-components';
+import { Button, Drawer, Input, message } from 'antd';
 import { FooterToolbar, ModalForm, PageContainer, ProDescriptions, ProFormText, ProFormTextArea, ProTable } from '@ant-design/pro-components';
 import { FormattedMessage, useIntl } from '@umijs/max';
-import { Button, Drawer, Input, message } from 'antd';
 import React, { useRef, useState } from 'react';
+import { addRule, removeRule, rule, updateRule } from '@/services/ant-design-pro/api';
 
-import { PlusOutlined } from '@ant-design/icons';
 import type { FormValueType } from './components/UpdateForm';
+import { PlusOutlined } from '@ant-design/icons';
 import UpdateForm from './components/UpdateForm';
 
 /**

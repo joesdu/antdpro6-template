@@ -20,7 +20,7 @@ export default {
   'pages.login.rememberMe': 'مرا به خاطر بسپار',
   'pages.login.forgotPassword': 'رمز عبور را فراموش کرده اید ?',
   'pages.login.submit': 'ارسال',
-  'pages.login.loginWith': 'وارد شوید با :',
+  'pages.login.loginWith': 'وارد شوید با',
   'pages.login.registerAccount': 'ثبت نام',
   'pages.welcome.link': 'خوش آمدید',
   'pages.welcome.alertMessage': 'اجزای سنگین تر سریعتر و قوی تر آزاد شده اند.',

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
 const waitTime = (time: number = 100) => {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     setTimeout(() => {
       resolve(true);
     }, time);
@@ -33,11 +33,11 @@ export default {
     if (!getAccess()) {
       res.status(401).send({
         data: {
-          isLogin: false,
+          isLogin: false
         },
         errorCode: '401',
         errorMessage: '请先登录！',
-        success: true,
+        success: true
       });
       return;
     }
@@ -54,28 +54,28 @@ export default {
         tags: [
           {
             key: '0',
-            label: '很有想法的',
+            label: '很有想法的'
           },
           {
             key: '1',
-            label: '专注设计',
+            label: '专注设计'
           },
           {
             key: '2',
-            label: '辣~',
+            label: '辣~'
           },
           {
             key: '3',
-            label: '大长腿',
+            label: '大长腿'
           },
           {
             key: '4',
-            label: '川妹子',
+            label: '川妹子'
           },
           {
             key: '5',
-            label: '海纳百川',
-          },
+            label: '海纳百川'
+          }
         ],
         notifyCount: 12,
         unreadCount: 11,
@@ -84,16 +84,16 @@ export default {
         geographic: {
           province: {
             label: '浙江省',
-            key: '330000',
+            key: '330000'
           },
           city: {
             label: '杭州市',
-            key: '330100',
-          },
+            key: '330100'
+          }
         },
         address: '西湖区工专路 77 号',
-        phone: '0752-268888888',
-      },
+        phone: '0752-268888888'
+      }
     });
   },
   // GET POST 可省略
@@ -102,20 +102,20 @@ export default {
       key: '1',
       name: 'John Brown',
       age: 32,
-      address: 'New York No. 1 Lake Park',
+      address: 'New York No. 1 Lake Park'
     },
     {
       key: '2',
       name: 'Jim Green',
       age: 42,
-      address: 'London No. 1 Lake Park',
+      address: 'London No. 1 Lake Park'
     },
     {
       key: '3',
       name: 'Joe Black',
       age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
+      address: 'Sidney No. 1 Lake Park'
+    }
   ],
   'POST /api/login/account': async (req: Request, res: Response) => {
     const { password, username, type } = req.body;
@@ -124,7 +124,7 @@ export default {
       res.send({
         status: 'ok',
         type,
-        currentAuthority: 'admin',
+        currentAuthority: 'admin'
       });
       access = 'admin';
       return;
@@ -133,7 +133,7 @@ export default {
       res.send({
         status: 'ok',
         type,
-        currentAuthority: 'user',
+        currentAuthority: 'user'
       });
       access = 'user';
       return;
@@ -142,7 +142,7 @@ export default {
       res.send({
         status: 'ok',
         type,
-        currentAuthority: 'admin',
+        currentAuthority: 'admin'
       });
       access = 'admin';
       return;
@@ -151,7 +151,7 @@ export default {
     res.send({
       status: 'error',
       type,
-      currentAuthority: 'guest',
+      currentAuthority: 'guest'
     });
     access = 'guest';
   },
@@ -168,7 +168,7 @@ export default {
       status: 500,
       error: 'error',
       message: 'error',
-      path: '/base/category/list',
+      path: '/base/category/list'
     });
   },
   'GET /api/404': (req: Request, res: Response) => {
@@ -177,7 +177,7 @@ export default {
       status: 404,
       error: 'Not Found',
       message: 'No message available',
-      path: '/base/category/list/2121212',
+      path: '/base/category/list/2121212'
     });
   },
   'GET /api/403': (req: Request, res: Response) => {
@@ -186,7 +186,7 @@ export default {
       status: 403,
       error: 'Forbidden',
       message: 'Forbidden',
-      path: '/base/category/list',
+      path: '/base/category/list'
     });
   },
   'GET /api/401': (req: Request, res: Response) => {
@@ -195,9 +195,9 @@ export default {
       status: 401,
       error: 'Unauthorized',
       message: 'Unauthorized',
-      path: '/base/category/list',
+      path: '/base/category/list'
     });
   },
 
-  'GET  /api/login/captcha': getFakeCaptcha,
+  'GET  /api/login/captcha': getFakeCaptcha
 };

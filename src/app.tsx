@@ -1,15 +1,17 @@
 import '@/extensions';
 
-import { AvatarDropdown, AvatarName, Footer, IconFont, Question, SelectLang } from '@/components';
-import { ReactElement, ReactNode } from 'react';
-import { RunTimeLayoutConfig, history } from '@umijs/max';
+import { AvatarDropdown, AvatarName, IconFont, Question, SelectLang } from '@/components';
+import { DefaultFooter, SettingDrawer } from '@ant-design/pro-components';
+import type { ReactElement, ReactNode } from 'react';
 import { iconfont, loginPath } from '@/configs';
 import { layout01, layout02, layout03 } from '@/assets/app';
 
+import { GithubOutlined } from '@ant-design/icons';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
-import { SettingDrawer } from '@ant-design/pro-components';
+import type { RunTimeLayoutConfig } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
+import { history } from '@umijs/max';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 
 /**
@@ -62,7 +64,34 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }: a
     waterMarkProps: {
       content: initialState?.currentUser?.name
     },
-    footerRender: () => <Footer />,
+    footerRender: () => (
+      <DefaultFooter
+        style={{
+          background: 'none'
+        }}
+        copyright="2023 EasilyNET"
+        links={[
+          {
+            key: 'Ant Design Pro',
+            title: 'Ant Design Pro',
+            href: 'https://pro.ant.design',
+            blankTarget: true
+          },
+          {
+            key: 'github',
+            title: <GithubOutlined />,
+            href: 'https://github.com/ant-design/ant-design-pro',
+            blankTarget: true
+          },
+          {
+            key: 'Ant Design',
+            title: 'Ant Design',
+            href: 'https://ant.design',
+            blankTarget: true
+          }
+        ]}
+      />
+    ),
     onPageChange: () => {
       const { location } = history;
       // 如果没有登录，重定向到 login

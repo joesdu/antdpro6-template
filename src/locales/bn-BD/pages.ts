@@ -20,7 +20,7 @@ export default {
   'pages.login.rememberMe': 'আমাকে মনে রাখুন',
   'pages.login.forgotPassword': 'পাসওয়ার্ড ভুলে গেছেন?',
   'pages.login.submit': 'প্রবেশ করুন',
-  'pages.login.loginWith': 'লগইন করতে পারেন:',
+  'pages.login.loginWith': 'লগইন করতে পারেন',
   'pages.login.registerAccount': 'অ্যাকাউন্ট নিবন্ধন করুন',
   'pages.welcome.link': 'স্বাগতম',
   'pages.welcome.alertMessage': 'দ্রুত এবং শক্তিশালী ভারী শুল্ক উপাদান প্রকাশ করা হয়েছে।',
