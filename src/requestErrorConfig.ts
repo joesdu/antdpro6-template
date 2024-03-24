@@ -1,21 +1,33 @@
 ﻿import type { RequestConfig, RequestOptions } from '@umijs/max';
 import { message, notification } from 'antd';
 
+import { history } from '@umijs/max';
+import { loginPath } from '@/configs';
+
+/**
+ * 这里调整为EasilyNET的数据返回方式,仅返回data,请求的成功状态由HTTP状态码表示.所以注释掉一些代码.
+ */
+
 // 错误处理方案： 错误类型
-enum ErrorShowType {
-  SILENT = 0,
-  WARN_MESSAGE = 1,
-  ERROR_MESSAGE = 2,
-  NOTIFICATION = 3,
-  REDIRECT = 9
-}
+// enum ErrorShowType {
+//   SILENT = 0,
+//   WARN_MESSAGE = 1,
+//   ERROR_MESSAGE = 2,
+//   NOTIFICATION = 3,
+//   REDIRECT = 9
+// }
 // 与后端约定的响应数据格式
+//interface ResponseStructure {
+// success: boolean;
+// data: any;
+// errorCode?: number;
+// errorMessage?: string;
+// showType?: ErrorShowType;
+//}
 interface ResponseStructure {
-  success: boolean;
-  data: any;
-  errorCode?: number;
-  errorMessage?: string;
-  showType?: ErrorShowType;
+  status?: number;
+  title?: string;
+  detail?: string;
 }
 
 /**
@@ -28,11 +40,18 @@ export const errorConfig: RequestConfig = {
   errorConfig: {
     // 错误抛出
     errorThrower: res => {
-      const { success, data, errorCode, errorMessage, showType } = res as unknown as ResponseStructure;
-      if (!success) {
-        const error: any = new Error(errorMessage);
+      // const { success, data, errorCode, errorMessage, showType } = res as unknown as ResponseStructure;
+      // if (!success) {
+      //   const error: any = new Error(errorMessage);
+      //   error.name = 'BizError';
+      //   error.info = { errorCode, errorMessage, showType, data };
+      //   throw error; // 抛出自制的错误
+      // }
+      const { status, title, detail } = res as unknown as ResponseStructure;
+      if (status) {
+        const error: any = new Error(title);
         error.name = 'BizError';
-        error.info = { errorCode, errorMessage, showType, data };
+        error.info = { title, status, detail };
         throw error; // 抛出自制的错误
       }
     },
@@ -40,31 +59,55 @@ export const errorConfig: RequestConfig = {
     errorHandler: (error: any, opts: any) => {
       if (opts?.skipErrorHandler) throw error;
       // 我们的 errorThrower 抛出的错误。
+      // if (error.name === 'BizError') {
+      //   const errorInfo: ResponseStructure | undefined = error.info;
+      //   if (errorInfo) {
+      //     const { errorMessage, errorCode } = errorInfo;
+      //     switch (errorInfo.showType) {
+      //       case ErrorShowType.SILENT:
+      //         // do nothing
+      //         break;
+      //       case ErrorShowType.WARN_MESSAGE:
+      //         message.warning(errorMessage);
+      //         break;
+      //       case ErrorShowType.ERROR_MESSAGE:
+      //         message.error(errorMessage);
+      //         break;
+      //       case ErrorShowType.NOTIFICATION:
+      //         notification.open({
+      //           description: errorMessage,
+      //           message: errorCode
+      //         });
+      //         break;
+      //       case ErrorShowType.REDIRECT:
+      //         // TODO: redirect
+      //         break;
+      //       default:
+      //         message.error(errorMessage);
+      //     }
+      //   }
+      // } else
       if (error.name === 'BizError') {
         const errorInfo: ResponseStructure | undefined = error.info;
         if (errorInfo) {
-          const { errorMessage, errorCode } = errorInfo;
-          switch (errorInfo.showType) {
-            case ErrorShowType.SILENT:
-              // do nothing
-              break;
-            case ErrorShowType.WARN_MESSAGE:
-              message.warning(errorMessage);
-              break;
-            case ErrorShowType.ERROR_MESSAGE:
-              message.error(errorMessage);
-              break;
-            case ErrorShowType.NOTIFICATION:
+          const { status, title, detail } = errorInfo;
+          switch (status) {
+            case 500:
               notification.open({
-                description: errorMessage,
-                message: errorCode
+                description: detail,
+                message: title
               });
               break;
-            case ErrorShowType.REDIRECT:
+            case 403:
               // TODO: redirect
+              const { location } = history;
+              // 如果没有登录，重定向到 login
+              if (location.pathname !== loginPath) {
+                history.push(loginPath);
+              }
               break;
             default:
-              message.error(errorMessage);
+              message.error(title);
           }
         }
       } else if (error.response) {
@@ -95,15 +138,13 @@ export const errorConfig: RequestConfig = {
   // 响应拦截器
   responseInterceptors: [
     response => {
-      // 拦截响应数据，进行个性化处理
-      const { data } = response as unknown as ResponseStructure;
+      // 拦截响应数据，进行个性化处理,如将包装过的数据进行结构调整,只返回 data 部分到页面
+      // const { data } = response as unknown as ResponseStructure;
 
-      if (data?.success === false) {
-        message.error('请求失败！');
-      }
+      // if (data?.success === false) {
+      //   message.error('请求失败！');
+      // }
       return response;
     }
   ]
 };
-
-// TODO: 后期调整为支持 EasilyNET 的方式
