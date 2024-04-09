@@ -1,3 +1,5 @@
+![Alt](https://repobeats.axiom.co/api/embed/eb5077c4e8efe8e41d55f8e000cba2c37e967915.svg "Repobeats analytics image")
+
 # Ant Design Pro
 
 This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
