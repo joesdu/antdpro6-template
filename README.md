@@ -1,3 +1,5 @@
+![Alt](https://repobeats.axiom.co/api/embed/eb5077c4e8efe8e41d55f8e000cba2c37e967915.svg "Repobeats analytics image")
+
 # Ant Design Pro
 
 This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
@@ -33,4 +35,4 @@ You can view full document on our [official website](https://pro.ant.design). An
 
 ## 目前版本(官方代码版本)
 
-- 2024-01-23 [8ff545e8f4008be3c2fa4b34d2c470ad978e5f2b](https://github.com/ant-design/ant-design-pro/tree/8ff545e8f4008be3c2fa4b34d2c470ad978e5f2b)
+- 2024-02-18 [6c2b3ba8f55cd33f48d8bbb38084c997685753c3](https://github.com/ant-design/ant-design-pro/tree/6c2b3ba8f55cd33f48d8bbb38084c997685753c3)
