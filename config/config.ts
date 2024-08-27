@@ -79,9 +79,15 @@ export default defineConfig({
     ...defaultSettings
   },
   /**
+   * @name mako 配置
+   * @description 提升构建速度
+   * @doc https://umijs.org/docs/max/moment2dayjs
+   */
+  // mako: {},
+  /**
    * @name moment2dayjs 插件
    * @description 将项目中的 moment 替换为 dayjs
-   * @doc https://umijs.org/docs/max/moment2dayjs
+   * @doc https://umijs.org/docs/api/config#mako
    */
   moment2dayjs: {
     preset: 'antd',

@@ -1,4 +1,4 @@
-![Alt](https://repobeats.axiom.co/api/embed/eb5077c4e8efe8e41d55f8e000cba2c37e967915.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/eb5077c4e8efe8e41d55f8e000cba2c37e967915.svg 'Repobeats analytics image')
 
 # Ant Design Pro
 
@@ -35,4 +35,4 @@ You can view full document on our [official website](https://pro.ant.design). An
 
 ## 目前版本(官方代码版本)
 
-- 2024-02-18 [6c2b3ba8f55cd33f48d8bbb38084c997685753c3](https://github.com/ant-design/ant-design-pro/tree/6c2b3ba8f55cd33f48d8bbb38084c997685753c3)
+- 2024-06-04 [559c01d1d439a90079cef3ebdfca545cf768c9f4](https://github.com/ant-design/ant-design-pro/tree/559c01d1d439a90079cef3ebdfca545cf768c9f4)
