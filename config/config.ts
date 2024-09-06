@@ -83,7 +83,7 @@ export default defineConfig({
    * @description 提升构建速度
    * @doc https://umijs.org/docs/max/moment2dayjs
    */
-  // mako: {},
+  mako: {},
   /**
    * @name moment2dayjs 插件
    * @description 将项目中的 moment 替换为 dayjs
