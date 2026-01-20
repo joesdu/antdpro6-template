@@ -3,6 +3,7 @@
   "version": "6.0.0",
   "private": true,
   "description": "An out-of-box UI solution for enterprise applications",
+  "repository": "git@github.com:ant-design/ant-design-pro.git",
   "scripts": {
     "analyze": "cross-env ANALYZE=1 max build",
     "start": "cross-env PORT=8848 max dev",
@@ -12,6 +13,9 @@
     "lint-staged": "lint-staged",
     "prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\""
   },
+  "browserslist": [
+    "defaults"
+  ],
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "yarn lint-staged:js",
     "**/*.{js,jsx,tsx,ts,less,md,json}": [
@@ -26,12 +30,8 @@
     "antd-style": "^4.1.0",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.19",
-    "omit.js": "^2.0.2",
-    "rc-menu": "9.16.1",
-    "rc-util": "^5.44.4",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-helmet-async": "^2.0.5"
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@babel/eslint-plugin": "^7.27.1",

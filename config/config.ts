@@ -110,9 +110,12 @@ export default defineConfig({
    * @doc https://umijs.org/docs/max/antd#antd
    */
   antd: {
-    configProvider: {},
-    theme: {
-      token: {}
+    configProvider: {
+      theme: {
+        token: {
+          fontFamily: 'AlibabaSans, sans-serif',
+        },
+      },
     },
     appConfig: {
       message: {
@@ -166,5 +169,6 @@ export default defineConfig({
     strategy: 'normal'
   },
   esbuildMinifyIIFE: true,
+  // utoopack: {},
   requestRecord: {}
 });

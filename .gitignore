@@ -32,11 +32,11 @@ functions/*
 .umi
 .umi-production
 .umi-test
+.turbopack
 
 # screenshot
 screenshot
 .firebase
-.eslintcache
 
 build
 
