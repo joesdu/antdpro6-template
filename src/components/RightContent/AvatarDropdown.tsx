@@ -1,14 +1,13 @@
 import { LogoutOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
-import React, { useCallback } from 'react';
 import { history, useModel } from '@umijs/max';
 
 import HeaderDropdown from '../HeaderDropdown';
-import type { MenuInfo } from 'rc-menu/lib/interface';
+import type { MenuProps } from 'antd';
+import React from 'react';
 import { Spin } from 'antd';
 import { createStyles } from 'antd-style';
 import { flushSync } from 'react-dom';
 import { outLogin } from '@/services/ant-design-pro/api';
-import { stringify } from 'querystring';
 
 export type GlobalHeaderRightProps = {
   menu?: boolean;
@@ -47,35 +46,33 @@ export const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu, childre
     await outLogin();
     const { search, pathname } = window.location;
     const urlParams = new URL(window.location.href).searchParams;
+    const searchParams = new URLSearchParams({
+      redirect: pathname + search
+    });
     /** 此方法会跳转到 redirect 参数所在的位置 */
     const redirect = urlParams.get('redirect');
     // Note: There may be security issues, please note
     if (window.location.pathname !== '/login' && !redirect) {
       history.replace({
         pathname: '/login',
-        search: stringify({
-          redirect: pathname + search
-        })
+        search: searchParams.toString()
       });
     }
   };
   const { styles } = useStyles();
   const { initialState, setInitialState } = useModel('@@initialState');
 
-  const onMenuClick = useCallback(
-    (event: MenuInfo) => {
-      const { key } = event;
-      if (key === 'logout') {
-        flushSync(() => {
-          setInitialState(s => ({ ...s, currentUser: undefined }));
-        });
-        loginOut();
-        return;
-      }
-      history.push(`/account/${key}`);
-    },
-    [setInitialState]
-  );
+  const onMenuClick: MenuProps['onClick'] = event => {
+    const { key } = event;
+    if (key === 'logout') {
+      flushSync(() => {
+        setInitialState(s => ({ ...s, currentUser: undefined }));
+      });
+      loginOut();
+      return;
+    }
+    history.push(`/account/${key}`);
+  };
 
   const loading = (
     <span className={styles.action}>

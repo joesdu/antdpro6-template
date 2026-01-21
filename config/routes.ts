@@ -49,15 +49,15 @@ export default [
     name: 'list.table-list',
     icon: 'table',
     path: '/list',
-    component: './TableList'
+    component: './table-list'
   },
   {
     path: '/',
     redirect: '/welcome'
   },
   {
-    path: '*',
+    component: '404',
     layout: false,
-    component: './404'
+    path: './*'
   }
 ];

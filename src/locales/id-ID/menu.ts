@@ -18,7 +18,8 @@ export default {
   'menu.form.basic-form': 'Form Dasar',
   'menu.form.step-form': 'Form Bertahap',
   'menu.form.step-form.info': 'Form Bertahap(menulis informasi yang dibagikan)',
-  'menu.form.step-form.confirm': 'Form Bertahap(konfirmasi informasi yang dibagikan)',
+  'menu.form.step-form.confirm':
+    'Form Bertahap(konfirmasi informasi yang dibagikan)',
   'menu.form.step-form.result': 'Form Bertahap(selesai)',
   'menu.form.advanced-form': 'Form Lanjutan',
   'menu.list': 'Daftar',
@@ -48,5 +49,5 @@ export default {
   'menu.editor': 'Penyusun Grafis',
   'menu.editor.flow': 'Penyusun Alur',
   'menu.editor.mind': 'Penyusun Mind',
-  'menu.editor.koni': 'Penyusun Koni'
+  'menu.editor.koni': 'Penyusun Koni',
 };

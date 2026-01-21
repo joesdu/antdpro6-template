@@ -48,5 +48,5 @@ export default {
   'menu.editor': 'ویرایشگر گرافیک',
   'menu.editor.flow': 'ویرایشگر جریان',
   'menu.editor.mind': 'ویرایشگر ذهن',
-  'menu.editor.koni': 'ویرایشگر Koni'
+  'menu.editor.koni': 'ویرایشگر Koni',
 };

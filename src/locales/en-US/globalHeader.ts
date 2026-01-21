@@ -5,7 +5,8 @@ export default {
   'component.globalHeader.search.example3': 'Search example 3',
   'component.globalHeader.help': 'Help',
   'component.globalHeader.notification': 'Notification',
-  'component.globalHeader.notification.empty': 'You have viewed all notifications.',
+  'component.globalHeader.notification.empty':
+    'You have viewed all notifications.',
   'component.globalHeader.message': 'Message',
   'component.globalHeader.message.empty': 'You have viewed all messsages.',
   'component.globalHeader.event': 'Event',
@@ -13,5 +14,5 @@ export default {
   'component.noticeIcon.clear': 'Clear',
   'component.noticeIcon.cleared': 'Cleared',
   'component.noticeIcon.empty': 'No notifications',
-  'component.noticeIcon.view-more': 'View more'
+  'component.noticeIcon.view-more': 'View more',
 };

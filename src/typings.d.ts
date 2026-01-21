@@ -10,12 +10,6 @@ declare module '*.jpeg';
 declare module '*.gif';
 declare module '*.bmp';
 declare module '*.tiff';
-declare module '*.webp';
 declare module 'omit.js';
 declare module 'numeral';
-declare module '@antv/data-set';
 declare module 'mockjs';
-declare module 'react-fittext';
-declare module 'bizcharts-plugin-slider';
-
-declare const REACT_APP_ENV: 'test' | 'dev' | 'pre' | false;

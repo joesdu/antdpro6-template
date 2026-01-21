@@ -1,10 +1,20 @@
+// https://umijs.org/config/
+
 import defaultSettings from './defaultSettings';
 import { defineConfig } from '@umijs/max';
+import { join } from 'node:path';
+import proxy from './proxy';
 import routes from './routes';
 
-// const { REACT_APP_ENV = 'dev' } = process.env;
+const { UMI_ENV = 'dev' } = process.env;
 
-// https://umijs.org/config/
+/**
+ * @name 使用公共路径
+ * @description 部署时的路径，如果部署在非根目录下，需要配置这个变量
+ * @doc https://umijs.org/docs/api/config#publicpath
+ */
+const PUBLIC_PATH: string = '/';
+
 export default defineConfig({
   /**
    * @name 开启 hash 模式
@@ -12,6 +22,8 @@ export default defineConfig({
    * @doc https://umijs.org/docs/api/config#hash
    */
   hash: true,
+
+  publicPath: PUBLIC_PATH,
 
   /**
    * @name 兼容性设置
@@ -32,27 +44,23 @@ export default defineConfig({
    * @name 主题的配置
    * @description 虽然叫主题，但是其实只是 less 的变量设置
    * @doc antd的主题设置 https://ant.design/docs/react/customize-theme-cn
-   * @doc umi 的theme 配置 https://umijs.org/docs/api/config#theme
+   * @doc umi 的 theme 配置 https://umijs.org/docs/api/config#theme
    */
-  theme: {
-    // 如果不想要 configProvide 动态设置主题需要把这个设置为 default
-    // 只有设置为 variable， 才能使用 configProvide 动态设置主色调
-    'root-entry-name': 'variable'
-  },
+  // theme: { '@primary-color': '#1DA57A' }
   /**
    * @name moment 的国际化配置
    * @description 如果对国际化没有要求，打开之后能减少js的包大小
    * @doc https://umijs.org/docs/api/config#ignoremomentlocale
    */
   ignoreMomentLocale: true,
-  // /**
-  //  * @name 代理配置
-  //  * @description 可以让你的本地服务器代理到你的服务器上，这样你就可以访问服务器的数据了
-  //  * @see 要注意以下 代理只能在本地开发时使用，build 之后就无法使用了。
-  //  * @doc 代理介绍 https://umijs.org/docs/guides/proxy
-  //  * @doc 代理配置 https://umijs.org/docs/api/config#proxy
-  //  */
-  // proxy: proxy[REACT_APP_ENV as keyof typeof proxy],
+  /**
+   * @name 代理配置
+   * @description 可以让你的本地服务器代理到你的服务器上，这样你就可以访问服务器的数据了
+   * @see 要注意以下 代理只能在本地开发时使用，build 之后就无法使用了。
+   * @doc 代理介绍 https://umijs.org/docs/guides/proxy
+   * @doc 代理配置 https://umijs.org/docs/api/config#proxy
+   */
+  proxy: proxy[UMI_ENV as keyof typeof proxy],
   /**
    * @name 快速热更新配置
    * @description 一个不错的热更新组件，更新时可以保留 state
@@ -74,20 +82,15 @@ export default defineConfig({
    * @name layout 插件
    * @doc https://umijs.org/docs/max/layout-menu
    */
+  // title: 'Ant Design Pro',
   layout: {
     locale: true,
     ...defaultSettings
   },
   /**
-   * @name mako 配置
-   * @description 提升构建速度
-   * @doc https://umijs.org/docs/max/moment2dayjs
-   */
-  mako: {},
-  /**
    * @name moment2dayjs 插件
    * @description 将项目中的 moment 替换为 dayjs
-   * @doc https://umijs.org/docs/api/config#mako
+   * @doc https://umijs.org/docs/max/moment2dayjs
    */
   moment2dayjs: {
     preset: 'antd',
@@ -104,18 +107,13 @@ export default defineConfig({
     // default true, when it is true, will use `navigator.language` overwrite default
     baseNavigator: true
   },
-  /**
-   * @name antd 插件
-   * @description 内置了 babel import 插件
-   * @doc https://umijs.org/docs/max/antd#antd
-   */
   antd: {
     configProvider: {
       theme: {
         token: {
-          fontFamily: 'AlibabaSans, sans-serif',
-        },
-      },
+          fontFamily: 'AlibabaSans, sans-serif'
+        }
+      }
     },
     appConfig: {
       message: {
@@ -142,7 +140,7 @@ export default defineConfig({
    */
   headScripts: [
     // 解决首次加载时白屏的问题
-    { src: '/scripts/loading.js', async: true }
+    { src: join(PUBLIC_PATH, 'scripts/loading.js'), async: true }
   ],
   //================ pro 插件配置 =================
   presets: ['umi-presets-pro'],
@@ -165,10 +163,16 @@ export default defineConfig({
   //     projectName: 'swagger'
   //   }
   // ],
-  mfsu: {
-    strategy: 'normal'
+  mock: {
+    include: ['mock/**/*', 'src/pages/**/_mock.ts']
   },
-  esbuildMinifyIIFE: true,
+  /**
+   * @name mako 配置
+   * @description 提升构建速度
+   * @doc https://umijs.org/docs/max/moment2dayjs
+   */
+  mako: {},
   // utoopack: {},
-  requestRecord: {}
+  requestRecord: {},
+  exportStatic: {}
 });

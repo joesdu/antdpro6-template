@@ -13,5 +13,5 @@ export default {
   'component.noticeIcon.clear': 'クリア',
   'component.noticeIcon.cleared': 'クリア済み',
   'component.noticeIcon.empty': '通知なし',
-  'component.noticeIcon.view-more': 'もっと見る'
+  'component.noticeIcon.view-more': 'もっと見る',
 };

@@ -1,5 +1,4 @@
 import { Card, theme } from 'antd';
-import { rectangle, welcomebg } from '@/assets/welcome';
 
 import { PageContainer } from '@ant-design/pro-components';
 import React from 'react';
@@ -51,7 +50,7 @@ const InfoCard: React.FC<{
             padding: '8px 16px 16px 12px',
             color: '#FFF',
             fontWeight: 'bold',
-            backgroundImage: `url('${rectangle}')`
+            backgroundImage: "url('https://gw.alipayobjects.com/zos/bmw-prod/daaf8d50-8e6d-4251-905d-676a24ddfa12.svg')"
           }}
         >
           {index}
@@ -107,7 +106,7 @@ const Welcome: React.FC = () => {
             backgroundPosition: '100% -30%',
             backgroundRepeat: 'no-repeat',
             backgroundSize: '274px auto',
-            backgroundImage: `url('${welcomebg}')`
+            backgroundImage: "url('https://gw.alipayobjects.com/mdn/rms_a9745b/afts/img/A*BuFmQqsB2iAAAAAAAAAAAAAAARQnAQ')"
           }}
         >
           <div

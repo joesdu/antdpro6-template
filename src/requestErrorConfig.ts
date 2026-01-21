@@ -76,7 +76,7 @@ export const errorConfig: RequestConfig = {
       //       case ErrorShowType.NOTIFICATION:
       //         notification.open({
       //           description: errorMessage,
-      //           message: errorCode
+      //           title: errorCode
       //         });
       //         break;
       //       case ErrorShowType.REDIRECT:
@@ -130,7 +130,7 @@ export const errorConfig: RequestConfig = {
   requestInterceptors: [
     (config: RequestOptions) => {
       // 拦截请求配置，进行个性化处理。
-      const url = config?.url?.concat('?token = 123');
+      const url = config?.url?.concat('?token=123');
       return { ...config, url };
     }
   ],
